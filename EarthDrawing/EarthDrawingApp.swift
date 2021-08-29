@@ -11,7 +11,7 @@ import SwiftUI
 struct EarthDrawingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Earth()
         }
     }
 }
