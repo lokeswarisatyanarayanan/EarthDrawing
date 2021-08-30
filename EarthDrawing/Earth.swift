@@ -99,10 +99,6 @@ struct Earth: View {
     
     var body: some View {
         VStack {
-            Button(action: {self.bounce.toggle()}) {
-                Image(systemName: "globe")
-            }
-            Spacer().frame(height: 200)
             ZStack {
                 background
                 eyes
@@ -114,6 +110,8 @@ struct Earth: View {
                    alignment: .center)
             .offset(y: bounce ? 0 : 200)
             .animation(.linear(duration: 2), value: bounce)
+        }.onAppear {
+            bounce.toggle()
         }
     }
 }
